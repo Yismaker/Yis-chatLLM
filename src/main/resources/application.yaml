@@ -1,0 +1,9 @@
+server:
+  port: 8081
+
+langchain4j.community.dashscope.chat-model.api-key: ${aliQwen-api}
+langchain4j.community.dashscope.chat-model.model-name: qwen-max
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/chat_memory_db
