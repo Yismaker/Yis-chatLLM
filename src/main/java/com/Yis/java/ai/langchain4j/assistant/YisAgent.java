@@ -10,7 +10,8 @@ import static dev.langchain4j.service.spring.AiServiceWiringMode.EXPLICIT;
 @AiService(
         wiringMode = EXPLICIT,
         chatModel = "qwenChatModel",
-        chatMemoryProvider = "Yis_chatMemoryProvider"
+        chatMemoryProvider = "Yis_chatMemoryProvider",
+        tools = "appointmentTools"
 )
 public interface YisAgent {
     @SystemMessage(fromResource = "yis-prompt-template.txt")
