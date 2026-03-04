@@ -12,6 +12,14 @@ spring:
     username: root
     password: 111
 
+
+
+es:
+  index-name: yis-index-3
+  host: localhost
+  port: 9200
+
+
 #集成阿里通义千问-通用文本向量-v3
 langchain4j.community.dashscope.embedding-model.api-key: ${aliQwen-api}
 langchain4j.community.dashscope.embedding-model.model-name: text-embedding-v3

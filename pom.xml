@@ -16,6 +16,9 @@
         <knife4j.version>4.3.0</knife4j.version>
         <langchain4j.version>1.0.0-beta4</langchain4j.version>
         <mybatis-plus.version>3.5.11</mybatis-plus.version>
+        <elasticsearch.version>7.12.1</elasticsearch.version>
+        <!-- 新版 Java Client 适配 7.x 的版本（7.17.0 是 7.x 最后一个版本，兼容 7.12.1） -->
+        <es-java-client.version>7.17.0</es-java-client.version>
     </properties>
     <dependencies>
         <!-- web应用程序核心依赖 -->
@@ -80,40 +83,34 @@
             <version>1.11.0-beta19</version>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>dev.langchain4j</groupId>-->
-<!--            <artifactId>langchain4j-elasticsearch</artifactId>-->
-<!--            <exclusions>-->
-<!--                <exclusion>-->
-<!--                    <groupId>co.elastic.clients</groupId>-->
-<!--                    <artifactId>elasticsearch-java</artifactId>-->
-<!--                </exclusion>-->
-<!--            </exclusions>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j-elasticsearch</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>co.elastic.clients</groupId>
+                    <artifactId>elasticsearch-java</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>org.elasticsearch.client</groupId>-->
-<!--            <artifactId>elasticsearch-rest-client</artifactId>-->
-<!--            <version>8.17.0</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-client</artifactId>
+            <version>8.17.0</version>
+        </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>co.elastic.clients</groupId>-->
-<!--            <artifactId>elasticsearch-java</artifactId>-->
-<!--            <version>8.17.0</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>co.elastic.clients</groupId>
+            <artifactId>elasticsearch-java</artifactId>
+            <version>8.17.0</version>
+        </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>co.elastic.clients</groupId>-->
-<!--            <artifactId>elasticsearch-java</artifactId>-->
-
-<!--        </dependency>-->
-
-<!--        <dependency>-->
-<!--            <groupId>com.alibaba</groupId>-->
-<!--            <artifactId>fastjson</artifactId>-->
-<!--            <version>1.2.54</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.54</version>
+        </dependency>
 
         <!--流式输出-->
         <dependency>
